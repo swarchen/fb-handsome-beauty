@@ -9,5 +9,8 @@
 
 這個網站為MEAN(mongodb, express, AngularJS, Node.js)架構
 
+並deploy到AWS上
+
 ![DEMO](./img/fb-handsome.gif)
 
+![GA](./img/ga.png)
