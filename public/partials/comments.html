@@ -1,0 +1,43 @@
+<div class="container">
+<a class="waves-effect waves-light btn " href="#/">依照讚數排名</a>
+<a class="waves-effect waves-light btn " href="#/comments">依照留言排名</a>
+<a class="waves-effect waves-light btn " href="#/likesgrowth">依照讚數增長排名</a>
+<a class="waves-effect waves-light btn " href="#/commentsgrowth">依照留言增長排名</a>
+<h4>留言排行榜</h4>
+<h5 ng-if="postcount">目前總共有{{postcount}}篇貼文</h5>
+  <div class="row">
+  <div class="col s12 m4" ng-repeat="post in posts">
+       <div class="card" >
+         <div class="card-image">
+            <a target="_blank" href="{{post.link}}">
+                <img ng-src="{{post.imgUrl}}">
+                <span class="card-title red-text accent-3">No.{{$index+1}}</span>
+            </a>
+            </div>
+            <div class="card-action">
+              <span>{{post.comments}} </span><i class="material-icons">comment</i>
+              <span>{{post.likes}} </span><i class="material-icons">thumb_up</i>
+              <a ng-show="auth" ng-click="delete(post._id)">delete</a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+  <div class="center"><a ng-if="!isLoading" class="waves-effect waves-light btn" ng-click="more()">GIVE ME MORE</a></div>
+  <div class="center">
+  <div ng-if="isLoading" class="preloader-wrapper active">
+        <div class="spinner-layer spinner-red-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+

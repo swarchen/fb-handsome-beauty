@@ -1,0 +1,16 @@
+/node_modules/*
+credentials.csv
+*.zip
+result.json
+.elasticbeanstalk
+/gen/*
+python/.idea/misc.xml
+python/.idea/modules.xml
+python/.idea/python.iml
+python/.idea/workspace.xml
+python/ptt_one_day.json
+scala/.idea/
+scala/project/
+scala/target/
+nohup.out
+*.pyc
